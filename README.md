@@ -9,3 +9,5 @@ For this option you can select any drive connected to your computer, and the pro
 If you have already extracted the registry file you want to parse, then you can use this option to select that registry file directly.
 
 From here, you will be able to select from the checkboxes available to extract whatever information you need.
+
+Direct Executable Available on SourceForge: https://sourceforge.net/projects/regeasy/
