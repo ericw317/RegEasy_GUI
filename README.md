@@ -11,3 +11,5 @@ If you have already extracted the registry file you want to parse, then you can 
 From here, you will be able to select from the checkboxes available to extract whatever information you need.
 
 Direct Executable Available on SourceForge: https://sourceforge.net/projects/regeasy/
+Note:
+The exe is falsely flagged as malware because for this program I used a python library called "Impacket". This library often gets falsely flagged as malware because of its use in networking and pen testing. The code is open source for transparency.
