@@ -1,0 +1,7 @@
+flet==0.22.*
+
+pip install psutil
+pip install python-registry
+pip install pytz
+pip install tzdata
+pip install impacket
