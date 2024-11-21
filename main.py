@@ -1,10 +1,44 @@
 import flet as ft
+import os
+import json
+from CustomLibs import config
+
+def get_settings():
+    # set directory for settings file
+    settings_dir = os.path.join(os.path.expanduser("~"), ".RegEasy")
+    os.makedirs(settings_dir, exist_ok=True)
+    settings_file = os.path.join(settings_dir, "settings.json")
+
+    # default settings
+    default_settings = {
+        "timezone": "UTC",
+        "output_path": settings_dir
+    }
+
+    # check if settings file exists
+    if not os.path.exists(settings_file):
+        with open(settings_file, "w") as file:
+            json.dump(default_settings, file, indent=4)
+
+    # load settings
+    with open(settings_file, "r") as file:
+        settings = json.load(file)
+        timezone = settings["timezone"]
+        output_path = settings["output_path"]
+
+    config.timezone = timezone
+    config.output_path = output_path
+
+
+get_settings()
+
 from user_controls.routes import router
 from user_controls.app_bar import NavBar
 import views.software_page as direct_page
 import views.system_page as system_page
 import views.sam_page as sam_page
 import views.NTUSER_page as NTUSER_page
+import views.settings_page as settings_page
 
 def main(page: ft.Page):
     page.title = "RegEasy"
@@ -27,6 +61,7 @@ def main(page: ft.Page):
     system_page.get_page(page)
     sam_page.get_page(page)
     NTUSER_page.get_page(page)
+    settings_page.get_page(page)
     page.go('/')
 
 ft.app(target=main)

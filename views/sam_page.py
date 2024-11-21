@@ -81,7 +81,8 @@ def parse_SAM():
         open_error("No drive or registry file selected.")
 
 def export_data(data):
-    with open("SAM Data.txt", 'w') as file:
+    output_path = os.path.join(config.output_path, "SAM Data.txt")
+    with open(output_path, 'w') as file:
         file.write(data)
 
 def open_dlg_loading(e=None):

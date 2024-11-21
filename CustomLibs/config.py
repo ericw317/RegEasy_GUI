@@ -4,6 +4,8 @@ from CustomLibs import InputValidation as IV
 import shutil
 
 timezone = "America/New_York"
+output_path = ""
+settings_path = os.path.join(os.path.expanduser("~"), ".RegEasy", "settings.json")
 
 # set path
 def set_path(artifact_path, drive):

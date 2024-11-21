@@ -124,7 +124,8 @@ def parse_NTUSER():
         open_error("Invalid input. Select a drive AND user, or select a registry file.")
 
 def export_data(data):
-    with open("NTUSER Data.txt", 'w') as file:
+    output_path = os.path.join(config.output_path, "NTUSER Data.txt")
+    with open(output_path, 'w') as file:
         file.write(data)
 
 def open_dlg_loading(e=None):

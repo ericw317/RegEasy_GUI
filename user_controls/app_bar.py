@@ -12,7 +12,8 @@ def NavBar(page):
             ft.dropdown.Option("SYSTEM"),
             ft.dropdown.Option("SOFTWARE"),
             ft.dropdown.Option("SAM"),
-            ft.dropdown.Option("NTUSER.DAT")
+            ft.dropdown.Option("NTUSER.DAT"),
+            ft.dropdown.Option("Settings")
         ]
     )
 
@@ -26,6 +27,8 @@ def NavBar(page):
             navigation = "/sam_page"
         elif NavBar.value == "NTUSER.DAT":
             navigation = "/ntuser_page"
+        elif NavBar.value == "Settings":
+            navigation = "/settings"
         page.go(navigation)
 
     return NavBar

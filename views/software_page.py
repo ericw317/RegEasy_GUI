@@ -109,7 +109,8 @@ def parse_SOFTWARE():
         open_error("No drive or registry file selected.")
 
 def export_data(data):
-    with open("SOFTWARE Data.txt", 'w') as file:
+    output_path = os.path.join(config.output_path, "SOFTWARE Data.txt")
+    with open(output_path, 'w') as file:
         file.write(data)
 
 def open_dlg_loading(e=None):
