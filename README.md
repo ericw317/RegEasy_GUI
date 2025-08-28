@@ -10,7 +10,6 @@ If you have already extracted the registry file you want to parse, then you can 
 
 From here, you will be able to select from the checkboxes available to extract whatever information you need.
 
-Direct Executable Available on SourceForge: https://sourceforge.net/projects/regeasy/
 
 Note:
 
